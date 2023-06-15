@@ -56,7 +56,7 @@ class XmlValidator
     public function throwExceptionOnErrors(): void
     {
         if (! $this->result['valid']) {
-            throw new Exception($this->result['errors']);
+            throw new ExceptionXmlNotValid($this->result['errors']);
         }
     }
 
